@@ -4,10 +4,10 @@ using System.Text;
 
 namespace UTS_PBO
 {
-    public class PesananDineIn : Pesanankopi
+    public class DineIn : Pesanankopi
     {
         private double hargaPercup;
-        public PesananDineIn(string namaPelanggan, int nomorAntrian, string menuKopi, int jumlahcup, double hargaPercup) : base(namaPelanggan, nomorAntrian, menuKopi, jumlahcup)
+        public DineIn(string namaPelanggan, int nomorAntrian, string menuKopi, int jumlahcup, double hargaPercup) : base(namaPelanggan, nomorAntrian, menuKopi, jumlahcup)
         {
             this.hargaPercup = hargaPercup;
         }
@@ -22,12 +22,12 @@ namespace UTS_PBO
             this.hargaPercup = hargaPercup;
         }
 
-        public double HitungTotalBayar()
+        public override double HitungTotalBayar()
         {
             return getjumlahcup () * hargaPercup;
         }
 
-        public void tampilanInfo()
+        public void TampilInfo()
         {
             base.tampilinfo();
 

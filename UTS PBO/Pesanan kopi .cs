@@ -6,7 +6,7 @@ using System.Text;
 
 namespace UTS_PBO
 {
-    public class Pesanankopi
+    public abstract class Pesanankopi
     {
         private string namapelanggan;
         private int nomorantrian;
@@ -19,6 +19,12 @@ namespace UTS_PBO
             this.namapelanggan = namapelanggan;
             this.nomorantrian = nomorantrian;
             this.menukopi = menukopi;
+            this.jumlahcup = jumlahcup;
+        }
+
+        protected Pesanankopi(string namapelanggan, int jumlahcup)
+        {
+            this.namapelanggan = namapelanggan;
             this.jumlahcup = jumlahcup;
         }
 
@@ -67,8 +73,8 @@ namespace UTS_PBO
             Console.WriteLine("Jumlha cup : " + jumlahcup);
         }
 
-        
-    }
+        public abstract double HitungTotalBayar();
+    }       
 
 }
 
