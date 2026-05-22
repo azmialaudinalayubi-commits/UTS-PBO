@@ -6,15 +6,15 @@ using System.Text;
 
 namespace UTS_PBO
 {
-    private class Pesanan_kopi
+    public class Pesanankopi
     {
         private string namapelanggan;
         private int nomorantrian;
         private string menukopi;
-        private int jumlahcup;
+        protected int jumlahcup;
 
         // constructor 
-        public Pesanan_kopi(string namapelanggan, int nomorantrian, string menukopi, int jumlahcup)
+        public Pesanankopi(string namapelanggan, int nomorantrian, string menukopi, int jumlahcup)
         {
             this.namapelanggan = namapelanggan;
             this.nomorantrian = nomorantrian;
